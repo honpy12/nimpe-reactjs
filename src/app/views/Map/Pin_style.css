@@ -1,0 +1,41 @@
+:root {
+	--layersize: 100px;
+	--pinsize: 15px;
+}
+.layer_patient,
+.layer_vector {
+	position: relative;
+	width: var(--layersize);
+	height: var(--layersize);
+	border-radius: 50%;
+}
+
+.layer_patient {
+	background: rgba(240, 5, 5, 0.3);
+}
+
+.layer_vector {
+	background: rgba(17, 4, 204, 0.3);
+}
+.tear_patient,
+.tear_vector {
+	top: calc((var(--layersize) - var(--pinsize)) / 2);
+	left: calc((var(--layersize) - var(--pinsize)) / 2);
+	position: absolute;
+	transform: rotate(135deg);
+	width: var(--pinsize);
+	height: var(--pinsize);
+	border-top-left-radius: 50%;
+	border-bottom-right-radius: 50%;
+	border-bottom-left-radius: 50%;
+}
+
+.tear_patient {
+	border: 1px solid rgb(180, 6, 6);
+	background: rgb(219, 5, 5);
+}
+
+.tear_vector {
+	border: 1px solid rgb(16, 4, 180);
+	background: rgb(14, 3, 172);
+}
